@@ -1,6 +1,10 @@
 
 ### Bad Memory 1
 
+Video: [Before the fix](https://github.com/KittyMac/pony.problems/raw/master/bad_memory_1/before_change.mp4)
+
+Video: [After the fix](https://github.com/KittyMac/pony.problems/raw/master/bad_memory_1/after_change.mp4)
+
 When an actor allocates memory and then shares it with another actor, the other actor just references the memory from the original actor and doesn't copy the memory (good).  When the other actor is done referencing the original memory, it sends a message to the originating actor to let it know it is not referencing the memory anymore.
 
 Due to the way the garbage collector is fenced (it only runs when an actor allocated more memory than the ```next_gc``` value specifies), a producer which generates a bunch of messages and then goes quiet while those messages are processed will not free any memory even though the consuming actor may have finished with it.

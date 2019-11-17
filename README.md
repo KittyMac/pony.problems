@@ -4,9 +4,9 @@ A gathering place for my notes regarding pony runtime issues I have found and fi
 
 ## Issues
 
-* **Bad Memory 1**  
+* **[Bad Memory 1](https://github.com/KittyMac/pony.problems/tree/master/bad_memory_1)**  
   *Freeing memory shared between actors as soon as possible*
-* **Mailbox Overload 1**  
+* **[Mailbox Overload 1](https://github.com/KittyMac/pony.problems/tree/master/mailbox_overload_1)**  
   *Mechanism for empowering producing actors to only provide as much data as the system can conveniently handle (ie prevent overloads and actor muting before it happens)*
 
 

@@ -1,5 +1,9 @@
 ### Mailbox Overload 1
 
+Video: [Before the fix](https://github.com/KittyMac/pony.problems/raw/master/mailbox_overload_1/before_change.mp4)
+
+Video: [After the fix](https://github.com/KittyMac/pony.problems/raw/master/mailbox_overload_1/after_change.mp4)
+
 When a fast producer is paired with a slow consumer, the current pony mechanism for not overloading the consumer looks like this:
 
 1. The producer can spam as many messages at the consumer as it wants.
