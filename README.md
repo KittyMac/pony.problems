@@ -8,6 +8,8 @@ A gathering place for my notes regarding pony runtime issues I have found and fi
   *Freeing memory shared between actors as soon as possible*
 * **[Mailbox Overload 1](https://github.com/KittyMac/pony.problems/tree/master/mailbox_overload_1)**  
   *Mechanism for empowering producing actors to only provide as much data as the system can conveniently handle (ie prevent overloads and actor muting before it happens)*
+* **[CPU Count 1](https://github.com/KittyMac/pony.problems/tree/master/cpu_count_1)**  
+  *Adds **cpu_count** as a value on env object so the Pony programmer can use core count to make smarter decisions*
 
 
 
