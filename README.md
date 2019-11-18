@@ -9,13 +9,15 @@ A gathering place for my notes regarding pony runtime issues I have found and fi
 * **[Mailbox Overload 1](https://github.com/KittyMac/pony.problems/tree/master/mailbox_overload_1)**  
   *Mechanism for empowering producing actors to only provide as much data as the system can conveniently handle (ie prevent overloads and actor muting before it happens)*
 * **[CPU Count 1](https://github.com/KittyMac/pony.problems/tree/master/cpu_count_1)**  
-  *Adds **cpu_count** as a value on env object so the Pony programmer can use core count to make smarter decisions*
+  *Adds cpu_count as a value on env object so the Pony programmer can use core count to make smarter decisions*
+* **[Sender Overloading 1](https://github.com/KittyMac/pony.problems/tree/master/sender_overloading_1)**  
+  *If an actor sends a message to another actor's queue and that queue would then have more messages than the batch size, set the overloaded flag on the receiving actor*
 
 
 
 ## A note about methodology
 
-For issues I have recorded here, I have taken pains to ensure that they exhibit themselves on vanilla pony.  However, in order to visualize what exactly the ponyrt is doing I have a small amount of code added on top of vanilla pony. This code simply records actor information to a temp file for specific actor events (for example, when an actor begins a run by entering ponyint_actor_run() an event is generated). I can then play back these events in a graphing tool I wrote specifically for this purpose.  Each of the issues recorded here should have a "before_change.mp4" and an "after_change.mp4" video showing the results of that visualization.
+For issues I have recorded here, I have taken pains to ensure that they exhibit themselves on vanilla pony.  However, in order to visualize what exactly the ponyrt is doing I have a small amount of code added on top of vanilla pony. This code simply records actor information to a temp file for specific actor events (for example, when an actor begins a run by entering ```ponyint_actor_run()``` an event is generated). I can then play back these events in a graphing tool I wrote specifically for this purpose.  Each of the issues recorded here should have a ```before_change.mp4``` and an ```after_change.mp4``` video showing the results of that visualization.
 
 To understand what is going on in the visuals:
 
