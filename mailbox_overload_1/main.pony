@@ -46,7 +46,10 @@ actor Producer
 			// actor actively freed memory, and it provides a parameter to let us know if the memory
 			// being freed had been shared with another actor.
 			//
-			// Note we could "prime the pump" if we want by producing a few extra chunks of data here
+			// Note we can "prime the pump" by producing a few extra chunks of data here, this ensures
+			// we get concurrency
+			produceLimited()
+			produceLimited()
 			produceLimited()
 		end
 		
