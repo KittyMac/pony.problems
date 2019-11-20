@@ -10,8 +10,12 @@ A gathering place for my notes regarding pony runtime issues I have found and fi
   *Mechanism for empowering producing actors to only provide as much data as the system can conveniently handle (ie prevent overloads and actor muting before it happens)*
 * **[CPU Count 1](https://github.com/KittyMac/pony.problems/tree/master/cpu_count_1)**  
   *Adds cpu_count as a value on env object so the Pony programmer can use core count to make smarter decisions*
-* **[Sender Overloading 1](https://github.com/KittyMac/pony.problems/tree/master/sender_overloading_1)**  
-  *If an actor sends a message to another actor's queue and that queue would then have more messages than the batch size, set the overloaded flag on the receiving actor*
+* **[Actor Batch Size and Actor Priority](https://github.com/KittyMac/pony.problems/tree/master/actor_batch_and_priority_1)**  
+  *Not all actors are created equal, so let's not treat them as such.*
+* **[Load Balancing](https://github.com/KittyMac/pony.problems/tree/master/load_balancing_1)**  
+  *New ```ponyint_actor_num_messages()``` function to allow FFI access to actor message queue sizes*
+* **Explicit Yield**  
+  *New ```ponyint_actor_yield()``` method allows you to flag an actor that should end its processing run after completing the current message (and yield rescheduling to the next actor regardless of actor priority)*
 
 
 
