@@ -16,7 +16,7 @@ actor Producer
 	be produce() =>
 		for i in Range[U32](0, 20) do
 			let msg = "x".mul(Data.size())
-			@fprintf[I64](@pony_os_stdout[Pointer[U8]](), "produced %d bytes of data, count = %d\n".cstring(), Data.size(), i)
+			@fprintf[I32](@pony_os_stdout[Pointer[U8]](), "produced %d bytes of data, count = %d\n".cstring(), Data.size(), i)
 			target.receive(consume msg)
 		end
 	
@@ -27,9 +27,9 @@ actor Consumer
 
 	be receive(dataIso: Any iso) =>
 		try
-			@fprintf[I64](@pony_os_stdout[Pointer[U8]](), "begin consuming %d bytes of data\n".cstring(), (dataIso as String iso).size())
+			@fprintf[I32](@pony_os_stdout[Pointer[U8]](), "begin consuming %d bytes of data\n".cstring(), (dataIso as String iso).size())
 			@sleep[U32](U32(1))
-			@fprintf[I64](@pony_os_stdout[Pointer[U8]](), "end consuming %d bytes of data\n".cstring(), (dataIso as String iso).size())
+			@fprintf[I32](@pony_os_stdout[Pointer[U8]](), "end consuming %d bytes of data\n".cstring(), (dataIso as String iso).size())
 		end
 
 actor Main

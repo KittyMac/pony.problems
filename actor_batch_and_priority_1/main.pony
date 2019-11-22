@@ -55,7 +55,7 @@ actor Producer
 				msg.pop()?
 			end
 			
-			@fprintf[I64](@pony_os_stdout[Pointer[U8]](), "produced %d bytes of data, count = %d\n".cstring(), Data.size(), count)
+			@fprintf[I32](@pony_os_stdout[Pointer[U8]](), "produced %d bytes of data, count = %d\n".cstring(), Data.size(), count)
 			target.receive(consume msg)
 		elseif count == maxCount then
 			target.receive("".clone())
@@ -128,7 +128,7 @@ actor Worker
 		
 
 	be receive(stringIso: String iso) =>
-		@fprintf[I64](@pony_os_stdout[Pointer[U8]](), "worker working...\n".cstring())
+		@fprintf[I32](@pony_os_stdout[Pointer[U8]](), "worker working...\n".cstring())
 		
 		// simulate work; just switch all of the "x" to "y", leave the "z" as "z"
 		for i in Range[USize](0, stringIso.size()) do
@@ -158,11 +158,11 @@ actor Consumer
 	be receive(stringIso: String iso) =>
 		
 		if stringIso.size() == 0 then
-			@fprintf[I64](@pony_os_stdout[Pointer[U8]](), "done! X: %d   Y: %d   Z: %d\n".cstring(), numberOfX, numberOfY, numberOfZ)
+			@fprintf[I32](@pony_os_stdout[Pointer[U8]](), "done! X: %d   Y: %d   Z: %d\n".cstring(), numberOfX, numberOfY, numberOfZ)
 			return
 		end
 		
-		@fprintf[I64](@pony_os_stdout[Pointer[U8]](), "consumed!\n".cstring())
+		@fprintf[I32](@pony_os_stdout[Pointer[U8]](), "consumed!\n".cstring())
 		try
 			for i in Range[USize](0, stringIso.size()) do
 				let c = stringIso(i)?
