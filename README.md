@@ -16,6 +16,9 @@ A gathering place for my notes regarding pony runtime issues I have found and fi
   *New ```ponyint_actor_num_messages()``` function to allow FFI access to actor message queue sizes*
 * **Explicit Yield**  
   *New ```ponyint_actor_yield()``` method allows you to flag an actor that should end its processing run after completing the current message (and yield rescheduling to the next actor regardless of actor priority)*
+* ** Synchronous/Partial Actor Constructors**  
+* **[Synchronous/Partial Actor Constructors](https://github.com/KittyMac/pony.problems/tree/master/sync_partial_actor_constructor_1)**  
+  *Add support for partial actor constructors (which, by necessity, are called synchronously)*
 
 
 
