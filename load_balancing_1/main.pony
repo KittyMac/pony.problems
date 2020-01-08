@@ -18,7 +18,7 @@ actor Producer
 		target = target'
 		
 		count = 0
-		maxCount = 1000
+		maxCount = 20
 		
 		produce()
 	
@@ -42,7 +42,7 @@ actor Pool
 		numberOfWorkers = 4
 		
 		workers = Array[Worker](numberOfWorkers)
-		for i in Range[USize](0, numberOfWorkers) do
+		for _ in Range[USize](0, numberOfWorkers) do
 			workers.push(Worker)
 		end
 		
@@ -74,8 +74,8 @@ actor Pool
 		end
 	
 	be receive(stringIso: String iso) =>
-		//sendToWorkerBalanced(consume stringIso)
-		sendToWorkerRandom(consume stringIso)
+		sendToWorkerBalanced(consume stringIso)
+		//sendToWorkerRandom(consume stringIso)
 
 actor Worker
 
@@ -84,6 +84,7 @@ actor Worker
 	
 	be receive(stringIso: String iso) =>
 		@sleep[U32](USize(1))
+		
 
 actor Main
 	new create(env: Env) =>
@@ -91,6 +92,7 @@ actor Main
 
 	// "ponynoblock" so we have less system messages to see in the analysis visualization
  	fun @runtime_override_defaults(rto: RuntimeOptions) =>
+		rto.ponyanalysis = true
 		rto.ponynoscale = true
 		rto.ponynoblock = true
 		rto.ponygcinitial = 0
