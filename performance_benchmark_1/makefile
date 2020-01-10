@@ -1,77 +1,81 @@
 all: test1 test2 stock1 stock2
 
 debugx:
-	/Volumes/Development/Development/pony/ponyc/build/release/ponyc  -V=0 -o ./build/
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
-	#lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	/Volumes/Development/Development/pony/ponyc/build/debug/ponyc -V=0 -o ./build/
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
+	lldb -f ./build/performance_benchmark_1 -o run -o quit --  --ponynoblock --ponynoscale
 	
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
-	./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#/Volumes/Development/Development/pony/ponyc/build/debug/ponyc -V=0 -o ./build/ && lldb -f ./build/performance_benchmark_1 -o run --  --ponynoblock --ponynoscale
+	
+	#/Volumes/Development/Development/pony/ponyc/build/release/ponyc  -V=0 -o ./build/
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	#./build/performance_benchmark_1 --ponynoblock --ponynoscale
+	
 	
 
 debug:
 	/Volumes/Development/Development/pony/ponyc/build/debug/ponyc -d -o ./build/
-	lldb ./build/performance_benchmark_1
+	lldb ./build/performance_benchmark_1 --ponynoblock --ponynoscale
 
 test1:
 	@echo "\n\n"
@@ -93,6 +97,6 @@ stock1:
 
 stock2:
 	@echo "\n\n"
-	@echo "Test 3: Stock pony w/out --ponynoblock (slower than should be)\n"
+	@echo "Test 4: Stock pony w/out --ponynoblock (slower but doesn't crash)\n"
 	ponyc -V=0 -o ./build/
 	-./build/performance_benchmark_1 --ponynoscale

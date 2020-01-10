@@ -51,7 +51,7 @@ actor Main
 							where default' = 10)
 						OptionSpec.i64("report-count",
 							"Number of reports to generate, default 0 is infinite"
-							where default' = 10)
+							where default' = 8)
 						OptionSpec.i64("initial-pings",
 							"Initial # of pings to send to each Pinger actor in an interval"
 							where default' = 5)
@@ -301,17 +301,13 @@ actor Pinger
 		try
 			_ps(n.usize())?.ping(42)
 			
-			SyncConstructorTest(42)
+			//SyncConstructorTest(42)
 		else
 			_env.out.print("Should never happen but did to pinger " + _id.string())
 		end
 
 
-actor SyncConstructorTest
-	
-	fun _priority():USize => 0
-	fun _batch():USize => 5_000_000
-		
+actor SyncConstructorTest		
 	new create(payload: I64) =>
 		None
 		//if false then error end
