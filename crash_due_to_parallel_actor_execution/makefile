@@ -11,4 +11,9 @@ test1:
 	@echo "Test: Latest pony master with patch to print out parallel access\n"
 	/Volumes/Development/Development/pony/ponyc/build/release/ponyc -V=0 -o ./build/
 	-./build/crash_due_to_parallel_actor_execution --ponynoblock --ponynoscale
+	
+debug:
+	/Volumes/Development/Development/pony/ponyc/build/debug/ponyc -d -V=0 -o ./build/
 
+lldb: debug
+	lldb ./build/crash_due_to_parallel_actor_execution

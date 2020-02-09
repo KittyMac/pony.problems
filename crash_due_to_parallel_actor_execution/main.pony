@@ -159,6 +159,10 @@ actor SyncLeader
     _partial_count = 0
     _waiting_for = _ps.size()
 
+  be print_total_count() =>
+    @printf[I32]("\ntotal_count: %lld\n\n".cstring(), _total_count)
+
+
   be report_stopped(id: I32) =>
     """
     Collect reports from Pingers that they have stopped working.
@@ -199,6 +203,8 @@ actor SyncLeader
         _total_count = _total_count + _partial_count
         _last_t = to_ns(t_s, t_ns)
         _waiting_for = _ps.size()
+      else
+        print_total_count()
       end
     end
 
@@ -220,7 +226,7 @@ actor SyncLeader
     for p in ps.values() do
       p.go()
     end
-    for i in Range[USize](0, initial_pings) do
+    for _ in Range[USize](0, initial_pings) do
       for p in ps.values() do
         p.ping(42)
       end
