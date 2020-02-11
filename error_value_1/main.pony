@@ -36,7 +36,18 @@ actor ErrorC
 				@fprintf[I32](stderr, "ErrorB code was %d\n%s\n".cstring(), __error_code, __error_loc)
 			end
 		end
+
+// To test that partial expressions in the error clause are not allowed
+/*
+actor ErrorD
+	fun partialError():U32? =>
+		error
 	
+	be makeError() =>
+		try
+		    error partialError()?
+		end
+*/
 
 actor Main
 
@@ -44,8 +55,9 @@ actor Main
 		let a = ErrorA
 		let b = ErrorB
 		let c = ErrorC
-		for _ in Range[USize](0,100_000) do
+		for _ in Range[USize](0,200) do
 			a.makeError()
 			b.makeError()
 			c.makeError()
 		end
+		
