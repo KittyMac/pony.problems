@@ -1,7 +1,9 @@
 version: "{build}"
 
 build_script:
+  - mv "../${APPVEYOR_PROJECT_SLUG}" "../${APPVEYOR_PROJECT_NAME}"
   - make ci
+  - mv "../${APPVEYOR_PROJECT_NAME}" "../${APPVEYOR_PROJECT_SLUG}"
 
 #artifacts:
 #  - path: 'ponyc-*.zip'
