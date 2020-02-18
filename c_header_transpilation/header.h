@@ -2,6 +2,59 @@
 // This is an example C header which the Pony transpiler will convert to Pony FFI definitions automagically
 
 
+/*
+** CAPI3REF: Result Codes
+** KEYWORDS: {result code definitions}
+**
+** Many SQLite functions return an integer result code from the set shown
+** here in order to indicate success or failure.
+**
+** New error codes may be added in future versions of SQLite.
+**
+** See also: [extended result code definitions]
+*/
+#define SQLITE_OK           0   /* Successful result */
+/* beginning-of-error-codes */
+#define SQLITE_ERROR        1   /* SQL error or missing database */
+#define SQLITE_INTERNAL     2   /* Internal logic error in SQLite */
+#define SQLITE_PERM         3   /* Access permission denied */
+#define SQLITE_ABORT        4   /* Callback routine requested an abort */
+#define SQLITE_BUSY         5   /* The database file is locked */
+#define SQLITE_LOCKED       6   /* A table in the database is locked */
+#define SQLITE_NOMEM        7   /* A malloc() failed */
+#define SQLITE_READONLY     8   /* Attempt to write a readonly database */
+#define SQLITE_INTERRUPT    9   /* Operation terminated by sqlite3_interrupt()*/
+#define SQLITE_IOERR       10   /* Some kind of disk I/O error occurred */
+#define SQLITE_CORRUPT     11   /* The database disk image is malformed */
+#define SQLITE_NOTFOUND    12   /* Unknown opcode in sqlite3_file_control() */
+#define SQLITE_FULL        13   /* Insertion failed because database is full */
+#define SQLITE_CANTOPEN    14   /* Unable to open the database file */
+#define SQLITE_PROTOCOL    15   /* Database lock protocol error */
+#define SQLITE_EMPTY       16   /* Database is empty */
+#define SQLITE_SCHEMA      17   /* The database schema changed */
+
+#define ERROR_MESSAGE_APP_DID_FINISH       "Application did finish launching"
+#define ERROR_MESSAGE_APP_DID_TERMINATE    "Application did terminate"
+#define ERROR_MESSAGE_UNEXPECTED_ERROR     "An unexpected error was encountered"
+
+#define SQLITE_MUTEX_FAST             0
+#define SQLITE_MUTEX_RECURSIVE        1
+#define SQLITE_MUTEX_STATIC_MASTER    2
+#define SQLITE_MUTEX_STATIC_MEM       3  /* sqlite3_malloc() */
+#define SQLITE_MUTEX_STATIC_MEM2      4  /* NOT USED */
+#define SQLITE_MUTEX_STATIC_OPEN      4  /* sqlite3BtreeOpen() */
+#define SQLITE_MUTEX_STATIC_PRNG      5  /* sqlite3_randomness() */
+#define SQLITE_MUTEX_STATIC_LRU       6  /* lru page list */
+#define SQLITE_MUTEX_STATIC_LRU2      7  /* NOT USED */
+#define SQLITE_MUTEX_STATIC_PMEM      7  /* sqlite3PageMalloc() */
+#define SQLITE_MUTEX_STATIC_APP1      8  /* For use by application */
+#define SQLITE_MUTEX_STATIC_APP2      9  /* For use by application */
+#define SQLITE_MUTEX_STATIC_APP3     10  /* For use by application */
+#define SQLITE_MUTEX_STATIC_VFS1     11  /* For use by built-in VFS */
+#define SQLITE_MUTEX_STATIC_VFS2     12  /* For use by extension VFS */
+#define SQLITE_MUTEX_STATIC_VFS3     13  /* For use by application VFS */
+
+
 #define SQLITE_VERSION        "3.7.7.1"
 #define SQLITE_VERSION_NUMBER 3007007
 #define SQLITE_SOURCE_ID      "2011-06-28 17:39:05 af0d91adf497f5f36ec3813f04235a6e195a605f"
@@ -46,9 +99,7 @@
 //  fun app_did_terminate():String => "Application did terminate"
 //  fun unexpected_error():String => "An unexpected error was encountered"
 
-#define ERROR_MESSAGE_APP_DID_FINISH       "Application did finish launching"
-#define ERROR_MESSAGE_APP_DID_TERMINATE    "Application did terminate"
-#define ERROR_MESSAGE_UNEXPECTED_ERROR     "An unexpected error was encountered"
+
 
 
 
