@@ -1,7 +1,6 @@
 
 // This is an example C header which the Pony transpiler will convert to Pony FFI definitions automagically
 
-
 /*
 ** CAPI3REF: Result Codes
 ** KEYWORDS: {result code definitions}
